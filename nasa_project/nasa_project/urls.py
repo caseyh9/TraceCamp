@@ -20,11 +20,11 @@ from nasa_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Create
-    path('nasa/create', comment_create),
+    path('nasa/create', views.comment_create),
     # Detail
-    path('nasa/<int:nasa_id>', comment_detail),
+    path('nasa/<int:nasa_id>', views.comment_detail),
     # list
-    path('nasa/list', comment_list),
+    path('nasa/list', views.comment_list),
     # Date Picker
-    path('nasa/date_picker', date_picker),
+    path('nasa/date_picker', views.date_picker),
 ]
