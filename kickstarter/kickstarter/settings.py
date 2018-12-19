@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kick.apps.KickstartConfig',
+    'kickstart.apps.KickstartConfig',
 ]
 
 MIDDLEWARE = [

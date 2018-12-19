@@ -2,6 +2,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('kick/', include('kick.urls')),
+    path('kickstart/', include('kickstart.urls')),
     path('admin/', admin.site.urls),
 ]
