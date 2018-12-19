@@ -1,7 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
+from django.core import serializers
+from kickstart.models import kickstarter
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the kick index.")
+def get_kickstarter(request, kick_id):
+    kick = kickstarter.objects.filter(id = kick_id)
+    response = serializers.serialize("json", kick)
+    return HttpResponse(response)
