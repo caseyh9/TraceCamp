@@ -22,7 +22,7 @@ urlpatterns = [
     # Create
     path('nasa/create', views.comment_create),
     # Detail
-    path('nasa/<int:nasa_id>', views.comment_detail),
+    path('nasa/detail/<int:nasa_id>', views.comment_detail),
     # list
     path('nasa/list', views.comment_list),
     # Date Picker

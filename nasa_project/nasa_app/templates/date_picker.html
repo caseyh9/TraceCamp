@@ -1,0 +1,6 @@
+<form method='post' action='/nasa/date_picker'>
+  {% csrf_token %}
+  <label for='date'>Enter a date </label>
+  <input type='date' name='date' value='yyyy-mm-dd'>
+  <button type='submit'>Submit</button>
+</form>
