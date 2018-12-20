@@ -1,6 +1,7 @@
 <img src="{{ image_url }}" alt='NASA image not loading.'/>
 <form method='post' action='/nasa/create'>
   {% csrf_token %}
+  <input type = "hidden" value = "{{ date }}" name = "date">
   <label for='comment'>Comment </label>
   <input type='text' name='comment'>
   <label for='rating'>Rating </label>

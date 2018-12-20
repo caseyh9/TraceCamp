@@ -20,7 +20,7 @@ def comment_create(request):
             rating = request.POST.get('rating'),
             date = parse_date(request.POST.get('date'))
         )
-        return redirect('/nasa/detail/' + str(nasa_comment.id))
+        return redirect('/nasa/detail/' + str(nasa_comment.id), {'nasa_comment':nasa_comment})
     else:
         return HttpResponse('Nope.')
 
