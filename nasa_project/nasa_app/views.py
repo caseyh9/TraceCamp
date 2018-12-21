@@ -9,7 +9,7 @@ from django.utils.dateparse import parse_date
 # Create your views here.
 def comment_create(request):
     if (request.method == "GET"):
-        api_key = "oMrH77hL0IcYFpEAYw6HpzxULiro2VX2jGy9CIMV"
+        api_key = "Io7aVU8Iba5NKo6jryGIhtvi7P9zRxhbBvB0al2M"
         date = request.GET.get("date")
         r = requests.get(f'https://api.nasa.gov/planetary/apod?date={date}&api_key={api_key}')
         url = r.json()["url"]
