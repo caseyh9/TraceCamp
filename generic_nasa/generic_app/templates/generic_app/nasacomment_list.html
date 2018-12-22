@@ -1,6 +1,6 @@
 <ul>
 {% for nasa_comment in object_list %}
-    <li>{{ NasaComment.comment }} - {{ NasaComment.rating }}</li>
+    <li>{{ nasa_comment.comment }} - {{ nasa_comment.rating }}</li>
 {% empty %}
     <li>No articles yet.</li>
 {% endfor %}

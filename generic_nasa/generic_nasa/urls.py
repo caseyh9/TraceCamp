@@ -24,5 +24,5 @@ urlpatterns = [
     path('nasa/comment_list', NasaCommentListView.as_view(), name='comment_list'),
     path('nasa/comment_update/<int:id>/', NasaCommentUpdateView.as_view(), name='comment_update'),
     path('nasa/comment_detail/<int:id>/', NasaCommentDetailView.as_view(), name='comment_detail'),
-    path('nasa/comment_delete/<int:id>', NasaCommentDeleteView.as_view(), name='comment_delete'),
+    path('nasa/comment_delete/<int:id>/', NasaCommentDeleteView.as_view(), name='comment_delete'),
 ]
