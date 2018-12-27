@@ -1,7 +1,7 @@
 <h1>Events</h1>
 <ul>
 {% for event in object_list %}
-    <li>{{ event.date }} - {{ event.time }} - {{ event.description }}</li>
+    <li><a href='update_event/{{ event.id }}/'>{{ event.date }} - {{ event.time }} - {{ event.description }}</a></li>
 {% empty %}
     <li>No articles yet.</li>
 {% endfor %}

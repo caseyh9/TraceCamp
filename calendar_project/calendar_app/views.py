@@ -17,16 +17,18 @@ class CalendarCreateView(CreateView):
     #def post(self, request, *args, **kwargs):
     #    return reverse_lazy('detail_event', {'id':self.objects.id})
 
-class CalendarListDay(View):
-    def get(self, request):
+class CalendarListDay(View, day):
+    def get(self, request, day):
         day_list = [this_event for this_event in Event.objects.all() if this_event.date == day]
-        return render('calendar/list_day', {'day_list':day_list})
+        return render('list_day/{day}/', {'day_list':day_list})
 
 class CalendarUpdateView(UpdateView):
     model = Event
     pk_url_kwarg = "id"
     fields = ['date','time','description']
     template_name_suffix = 'update_event'
+    success_url = reverse_lazy('list_event')
+
 
 class CalendarDetailView(DetailView):
     model = Event

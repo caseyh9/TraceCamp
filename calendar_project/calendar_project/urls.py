@@ -25,5 +25,5 @@ urlpatterns = [
     path('update_event/<int:id>/', CalendarUpdateView.as_view(), name='update_event'),
     path('detail_event/<int:id>/', CalendarDetailView.as_view(), name='detail_event'),
     path('delete_event/<int:id>/', CalendarDeleteView.as_view(), name='delete_event'),
-    path('about/', CalendarListDay.as_view()),
+    path('list_day/{Date:date}/', CalendarListDay.as_view(), name='list_day'),
 ]

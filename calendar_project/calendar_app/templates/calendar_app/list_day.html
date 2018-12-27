@@ -1,0 +1,8 @@
+<h1>Events for {{ day_list[0].date }}</h1>
+<ul>
+{% for day in day_list %}
+  <li>{{ day.time }} | {{ day.description }}</li>
+{% empty %}
+  <li>No articles yet.</li>
+{% endfor %}
+</ul>
